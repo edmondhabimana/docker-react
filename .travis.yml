@@ -7,4 +7,4 @@ before_install:
   - docker build -t edmondhabimana/docker-react -f dockerfile.dev .
 
 script:
-  - docker run edmondhabimana/docker-react npm run test -- --coverage
+  - docker run -e CI=true edmondhabimana/docker-react npm run test -- --coverage
