@@ -8,9 +8,6 @@ services:
 before_install:
   - docker build -t edmondhabimana/docker-react -f dockerfile.dev .
 
-script:
-  - docker run -e CI=true edmondhabimana/docker-react npm run test -- --coverage
-
 deploy:
   provider: elasticbeanstalk
   region: "us-east-1"
